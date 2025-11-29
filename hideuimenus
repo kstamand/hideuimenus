@@ -489,8 +489,7 @@ Hide () {
 
     # process hidemenus file, skipping comments and blank lines, and for each menu name, add it to the menutree.js file to be excluded
     while read -r line; do
-        sed -i "${lineNum}i retArray.push($line);   //hidemenus" ${MENUTREE_FILE}
-        #sed -i "${lineNum}i retArray.push("\"${line}\"");   /*hidemenus*/" ${MENUTREE_FILE}
+        sed -i "${lineNum}i retArray.push($line);   /*hidemenus*/" ${MENUTREE_FILE}
         lineNum=$((lineNum + 1)) 
     done < $final_menus_tohidelist
 
