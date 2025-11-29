@@ -13,11 +13,11 @@ This script has been developed and tested on a GT-AX6000, running Asuswrt-Merlin
 SSH to the router and enter:
 
 ```Shell
-/usr/sbin/curl --retry 3 "https://raw.githubusercontent.com/kstamand/modrouterui/master/hideuimenus" -o "/jffs/addons/modrouterui/hideuimenus" --create-dirs && chmod +x /jffs/addons/modrouterui/hideuimenus && sh /jffs/addons/modrouterui/hideuimenus install
+/usr/sbin/curl --retry 3 "https://raw.githubusercontent.com/kstamand/hideuimenus/master/hideuimenus" -o "/jffs/addons/hideuimenus/hideuimenus" --create-dirs && chmod +x /jffs/addons/modrouterui/hideuimenus && sh /jffs/addons/modrouterui/hideuimenus install
 ```
 
 ## Configuration:
-1. Edit the file /jffs/addons/modrouterui/hide_menus_list file, using the option #5 (Edit), from the scripts menu:
+1. Edit the file /jffs/addons/hideuimenus/hide_menus_list file, using the option #5 (Edit), from the scripts menu:
   - The hide_menus_list file contains a commented list of menus to select
   - Uncomment the menus you wish to hide, generally those you may never use
   - After you save and exit the editor, choose menu option #6 to apply the changes (hide selected menus) from router's UI
