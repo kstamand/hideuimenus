@@ -1,4 +1,4 @@
-# ModrouterUI - Customize Asuswrt-Merlin router Web UI to hide unused / unwanted tabs
+# HideUIMenus - Customize Asuswrt-Merlin router Web UI to hide unused / unwanted tabs
 
 This script has been developed and tested on a GT-AX6000, running Asuswrt-Merlin 3006.102.5
 
