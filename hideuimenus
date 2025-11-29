@@ -482,7 +482,7 @@ Hide () {
     lineNum=$((lineNum + 3))
 
     # add text to menutree.js to show the start of my menu exlcusions
-    sed -i "${lineNum}i /* Begin my exclusions - //hidemenus */" ${MENUTREE_FILE}
+    sed -i "${lineNum}i /* Begin my exclusions - hidemenus */" ${MENUTREE_FILE}
 
     # move forward one line for the next line add
     lineNum=$((lineNum + 1))
@@ -490,12 +490,12 @@ Hide () {
     # process hidemenus file, skipping comments and blank lines, and for each menu name, add it to the menutree.js file to be excluded
     while read -r line; do
         sed -i "${lineNum}i retArray.push($line);   //hidemenus" ${MENUTREE_FILE}
-        #sed -i "${lineNum}i retArray.push("\"${line}\"");   //hidemenus" ${MENUTREE_FILE}
+        #sed -i "${lineNum}i retArray.push("\"${line}\"");   /*hidemenus*/" ${MENUTREE_FILE}
         lineNum=$((lineNum + 1)) 
     done < $final_menus_tohidelist
 
     # add text to menutree.js to show the end of my menu exclusions
-    sed -i "${lineNum}i /* End my exclusions - //hidemenus */" ${MENUTREE_FILE} 
+    sed -i "${lineNum}i /* End my exclusions - hidemenus */" ${MENUTREE_FILE} 
 
     # remount the modified menutree.js and release the lock file
     mount -o bind ${MENUTREE_FILE} /www/require/modules/menuTree.js
