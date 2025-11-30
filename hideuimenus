@@ -612,7 +612,6 @@ Main_Menu() {
         '9')
             Uninstall
             Magenta "   - Thanks for using $SCRIPT_NAME_DISPLAY - Bye"
-            # cd ... || exit
             exit 0
         ;;
         'e'|'E'|'exit')
